@@ -23,3 +23,14 @@ Route::get('/bridge', function() {
 
     return view('welcome');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/loginFacebook', 'SocialAuthController@loginFacebook');
+Route::get('/loginCallbackFacebook', 'SocialAuthController@loginCallbackFacebook');
+Route::get('/loginGithub', 'SocialAuthController@loginGithub');
+Route::get('/loginCallbackGithub', 'SocialAuthController@loginCallbackGithub');
+
+Route::any('activities', 'ActivityController@getIndex');
+Route::any('activities/status-update', 'ActivityController@postStatusUpdate');
+Route::any('activities/like', 'ActivityController@postLike');

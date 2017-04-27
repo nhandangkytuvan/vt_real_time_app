@@ -34,5 +34,14 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_CALLBACK_URL'),
+    ],
+    'facebook' => [
+        'client_id' => '440646552934910',
+        'client_secret' => 'bb0e25f8ffa92e5d02dffe82eec4082c',
+        'redirect' => 'http://localhost/vt_real_time_app/loginCallbackFacebook',
+    ],
 ];
